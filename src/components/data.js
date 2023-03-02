@@ -1,7 +1,7 @@
 export const items = [
     {
         id: 0,
-        title: "Test",
+        title: "Test 1",
         description: "A description",
         price: 0,
         quantity: 0,
@@ -9,7 +9,7 @@ export const items = [
     },
     {
         id: 1,
-        title: "Test",
+        title: "Test 2",
         description: "A description",
         price: 0,
         quantity: 0,
@@ -17,7 +17,7 @@ export const items = [
     },
     {
         id: 2,
-        title: "Test",
+        title: "Test 3",
         description: "A description",
         price: 0,
         quantity: 0,
