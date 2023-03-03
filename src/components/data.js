@@ -5,7 +5,7 @@ export const items = [
         description: "A description",
         price: 0,
         quantity: 0,
-        imgUrl: null,
+        imgUrl: "https://www.hammondmotorcycles.co.uk/wp-content/uploads/2022/03/t-shirt-with-logo-1.jpg",
     },
     {
         id: 1,
@@ -13,7 +13,7 @@ export const items = [
         description: "A description",
         price: 0,
         quantity: 0,
-        imgUrl: null,
+        imgUrl: "https://www.hammondmotorcycles.co.uk/wp-content/uploads/2022/03/t-shirt-with-logo-1.jpg",
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const items = [
         description: "A description",
         price: 0,
         quantity: 0,
-        imgUrl: null,
+        imgUrl: "https://www.hammondmotorcycles.co.uk/wp-content/uploads/2022/03/t-shirt-with-logo-1.jpg",
     },
     
 ]
