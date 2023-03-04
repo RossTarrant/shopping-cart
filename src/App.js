@@ -10,16 +10,24 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 
   const [basket, setBasket] = useState([]);
+  const [basketQuantity, setBasketQuantity] = useState(0);
+
+  const onAddToBasket = (item) => {
+    let currentBasket = [...basket];
+    currentBasket.push(item);
+    setBasketQuantity(basketQuantity + item.quantity);
+    setBasket(currentBasket);
+  }
 
   return (
     <div className={"min-h-screen bg-white"}> 
       <BrowserRouter>
-        <Header basket={basket}/>
+        <Header basketQuantity={basketQuantity}/>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/shop/:id" element={<ShopItem />} />
+          <Route path="/shop/:id" element={<ShopItem addToBasket={onAddToBasket} />} />
         </Routes>
       </BrowserRouter>
     </div>
