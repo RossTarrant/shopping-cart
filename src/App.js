@@ -11,6 +11,7 @@ function App() {
 
   const [basket, setBasket] = useState([]);
   const [basketQuantity, setBasketQuantity] = useState(0);
+  const [basketVisible, setBasketVisible] = useState(false);
 
   const onAddToBasket = (item) => {
     let currentBasket = [...basket];
@@ -19,16 +20,20 @@ function App() {
     setBasket(currentBasket);
   }
 
+  const onSwitchBasketView = () => {
+    setBasketVisible(!basketVisible);
+  }
+
   return (
     <div className={"min-h-screen bg-white"}> 
       <BrowserRouter>
-        <Header basketQuantity={basketQuantity}/>
+        <Header basketQuantity={basketQuantity} switchBasketView={onSwitchBasketView}/>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/shop/:id" element={<ShopItem addToBasket={onAddToBasket} />} />
+          <Route path="/shop/:id" element={<ShopItem addToBasket={onAddToBasket}/>} />
         </Routes>
+        <Cart basketVisible={basketVisible}/>
       </BrowserRouter>
     </div>
   );
