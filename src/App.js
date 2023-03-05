@@ -32,8 +32,8 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:id" element={<ShopItem addToBasket={onAddToBasket}/>} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
-        {basketVisible ? <Cart basketVisible={basketVisible}/> : null}
       </BrowserRouter>
     </div>
   );
