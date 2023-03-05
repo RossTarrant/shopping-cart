@@ -14,7 +14,7 @@ export default function ShopItem({addToBasket}){
     }
 
     const params = useParams();
-    const [shopItem, setShopItem] = useState(getItemById(Number(params.id)));
+    const [shopItem, setShopItem] = useState(getItemById(params.id));
 
     const onClickIncreaseQuantity = () => {
         let updatedItem = {...shopItem}
@@ -37,10 +37,6 @@ export default function ShopItem({addToBasket}){
         }
     }
 
-    const onInputChange = () => {
-
-    }
-
     return(
         <div className={"border-4 border-slate-800 shadow-lg rounded-lg flex gap-6 m-8 overflow-hidden font-jakarta"}>
             <img alt={"pic"} src={shopItem.imgUrl} className={"w-1/2 border-slate-800 border-r-4"}/>
@@ -54,10 +50,10 @@ export default function ShopItem({addToBasket}){
                 <div className={"flex justify-evenly items-center"}>
                     <div className={"flex gap-4 items-center"}>
                         <button onClick={onClickDecreaseQuantity} className={"text-4xl"}>-</button>
-                        <input className={"w-32 text-4xl text-center"} value={shopItem.quantity} onChange={onInputChange}/>
+                        <span className={"w-32 text-4xl text-center"}>{shopItem.quantity}</span>
                         <button onClick={onClickIncreaseQuantity} className={"text-4xl"}>+</button>
                     </div>
-                    <button onClick={onClickAddToBasket} className={"rounded-full bg-white-500 border-2 text-slate-800 border-slate-800 p-2 transition ease-out duration-300  hover:bg-slate-800 hover:text-white"}>Add to basket</button>
+                    <Link to={"/shop"}><button onClick={onClickAddToBasket} className={"rounded-full bg-white-500 border-2 text-slate-800 border-slate-800 p-2 transition ease-out duration-300  hover:bg-slate-800 hover:text-white"}>Add to basket</button></Link>
                 </div> 
             </div>
         </div>

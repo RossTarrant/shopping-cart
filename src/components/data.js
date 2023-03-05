@@ -1,6 +1,8 @@
+import uniqid from 'uniqid';
+
 export const items = [
     {
-        id: 0,
+        id: uniqid(),
         title: "An item",
         description: "A description about the item",
         price: 79,
@@ -8,7 +10,7 @@ export const items = [
         imgUrl: "https://www.hammondmotorcycles.co.uk/wp-content/uploads/2022/03/t-shirt-with-logo-1.jpg",
     },
     {
-        id: 1,
+        id: uniqid(),
         title: "Another item",
         description: "Another description",
         price: 89,
@@ -16,7 +18,7 @@ export const items = [
         imgUrl: "https://www.hammondmotorcycles.co.uk/wp-content/uploads/2022/03/t-shirt-with-logo-1.jpg",
     },
     {
-        id: 2,
+        id: uniqid(),
         title: "A final item",
         description: "A final description",
         price: 99,

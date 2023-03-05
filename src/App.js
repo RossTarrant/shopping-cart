@@ -32,7 +32,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:id" element={<ShopItem addToBasket={onAddToBasket}/>} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart basket={basket} />} />
         </Routes>
       </BrowserRouter>
     </div>
