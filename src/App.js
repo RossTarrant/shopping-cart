@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <div className={"min-h-screen bg-white"}> 
+    <div className={"bg-white"}> 
       <BrowserRouter>
         <Header basketQuantity={basketQuantity} switchBasketView={onSwitchBasketView}/>
         <Routes>
@@ -33,7 +33,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:id" element={<ShopItem addToBasket={onAddToBasket}/>} />
         </Routes>
-        <Cart basketVisible={basketVisible}/>
+        {basketVisible ? <Cart basketVisible={basketVisible}/> : null}
       </BrowserRouter>
     </div>
   );
