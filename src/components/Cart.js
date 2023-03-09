@@ -49,7 +49,7 @@ export default function Cart({basket, resetBasket, changeQuantity, removeFromBas
         <div className={"flex flex-col items-center justify-center"}>
             <h2>Your Shopping Basket</h2>
             {basket.length === 0 ? <p>Your basket is empty! Add some items in the shop!</p> : null}
-            <p>Your total is £{getTotal()}.00</p>
+            {basket.length !== 0 ? <p>Your total is £{getTotal()}.00</p> : null}
             {basket.length !== 0 ? <p>Check the basket below and then click proceed button</p> : null}
             {basket.length !== 0 ? <Link to={'/'}><button onClick={onClickProceedToPayment} className={"border-black border-2 bg-slate-800 text-white rounded-full p-2"}>Proceed to payment</button></Link> : null}
             <div className={"flex flex-col gap-10 items-center font-jakarta"}>

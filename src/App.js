@@ -20,9 +20,18 @@ function App() {
     setBasketQuantity(basketItemCount);
   }, [basket])
 
-  const onAddToBasket = (item) => {
+  const onAddToBasket = (itemToAdd) => {
     let updatedBasket = [...basket];
-    updatedBasket.push(item);
+    let itemExists = false;
+    for(let item of updatedBasket){
+      if(item.id === itemToAdd.id){
+        item.quantity = item.quantity + itemToAdd.quantity;
+        itemExists = true;
+      }
+    }
+    if(!itemExists){
+      updatedBasket.push(itemToAdd)
+    };
     setBasket(updatedBasket);
   }
 
@@ -42,7 +51,7 @@ function App() {
     let updatedBasket = [...basket];
     for(let i = 0; i < updatedBasket.length; i++){
       if(updatedBasket[i].id === id){
-        updatedBasket[i].quantity = button === '+' ? updatedBasket[i].quantity + 1 : (updatedBasket[i].quantity != 0 ? updatedBasket[i].quantity - 1 : updatedBasket[i].quantity);
+        updatedBasket[i].quantity = button === '+' ? updatedBasket[i].quantity + 1 : (updatedBasket[i].quantity !== 0 ? updatedBasket[i].quantity - 1 : updatedBasket[i].quantity);
       }
     }
     setBasket(updatedBasket);
