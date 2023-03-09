@@ -28,7 +28,7 @@ export default function Cart({basket, resetBasket, changeQuantity, removeFromBas
             <div key={item.id} className={"grid grid-cols-2 p-4 m-4 justify-between border-2 border-neutral-900 rounded-lg shadow-md overflow-hidden"}>
                 <img alt={"pic"} src={item.imgUrl} className={"w-60 h-60"}/>
                 <div className={"flex flex-col items-center justify-center gap-4"}>
-                    <h1 className={"text-3xl"}>{item.title}</h1>
+                    <h1 className={"text-2xl"}>{item.title}</h1>
                     <h2 className={""}>£{item.price}</h2>
                     <div className={"flex items-center gap-8"}>
                         <div className="flex">
