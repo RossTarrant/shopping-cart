@@ -25,10 +25,10 @@ export default function Cart({basket, resetBasket, changeQuantity, removeFromBas
 
     const getBasket = () => {
         const itemBasket = basket.map((item) => 
-            <div key={item.id} className={"border-black border-2 flex w-96 h-64"}>
-                <img alt={"pic"} src={item.imgUrl} className={"w-32 h-32"}/>
-                <div className={"flex flex-col items-center"}>
-                    <h1 className={""}>{item.title}</h1>
+            <div key={item.id} className={"grid grid-cols-2 p-4 m-4 justify-between border-2 border-neutral-900 rounded-lg shadow-md overflow-hidden"}>
+                <img alt={"pic"} src={item.imgUrl} className={"w-60 h-60"}/>
+                <div className={"flex flex-col items-center justify-center gap-4"}>
+                    <h1 className={"text-3xl"}>{item.title}</h1>
                     <h2 className={""}>£{item.price}</h2>
                     <div className={"flex items-center gap-8"}>
                         <div className="flex">
@@ -46,13 +46,13 @@ export default function Cart({basket, resetBasket, changeQuantity, removeFromBas
     }
 
     return(
-        <div className={"flex flex-col items-center justify-center"}>
-            <h2>Your Shopping Basket</h2>
+        <div className={"flex flex-col items-center justify-center gap-4 text-center"}>
+            <h2 className=" text-5xl p-4">Your Shopping Basket</h2>
             {basket.length === 0 ? <p>Your basket is empty! Add some items in the shop!</p> : null}
             {basket.length !== 0 ? <p>Your total is £{getTotal()}.00</p> : null}
             {basket.length !== 0 ? <p>Check the basket below and then click proceed button</p> : null}
-            {basket.length !== 0 ? <Link to={'/'}><button onClick={onClickProceedToPayment} className={"border-black border-2 bg-slate-800 text-white rounded-full p-2"}>Proceed to payment</button></Link> : null}
-            <div className={"flex flex-col gap-10 items-center font-jakarta"}>
+            {basket.length !== 0 ? <Link to={'/'}><button onClick={onClickProceedToPayment} className={"bg-slate-800 text-white rounded-full p-2 hover:bg-slate-700"}>Proceed to payment</button></Link> : null}
+            <div className={"flex flex-col items-center font-jakarta"}>
                 {getBasket()}
             </div>
         </div>
