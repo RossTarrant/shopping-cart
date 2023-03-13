@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart component renders Cart 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center justify-center gap-4 text-center"
+  >
+    <h2
+      class=" text-5xl p-4"
+    >
+      Your Shopping Basket
+    </h2>
+    <p>
+      Your total is £
+      397
+      .00
+    </p>
+    <p>
+      Check the basket below and then click proceed button
+    </p>
+    <a
+      href="/"
+    >
+      <button
+        class="bg-slate-800 text-white rounded-full p-2 hover:bg-slate-700"
+      >
+        Proceed to payment
+      </button>
+    </a>
+    <div
+      class="flex flex-col items-center font-jakarta"
+    >
+      <div
+        class="grid grid-cols-2 p-4 m-4 justify-between border-2 border-neutral-900 rounded-lg shadow-md overflow-hidden"
+      >
+        <img
+          alt="pic"
+          class="w-60 h-60"
+          src="http://cdn.shopify.com/s/files/1/0083/3903/0082/products/POSS03S1_BLACKTAN_1_grande.jpg?v=1654077320"
+        />
+        <div
+          class="flex flex-col items-center justify-center gap-4"
+        >
+          <h1
+            class="text-2xl"
+          >
+            Steve Madden
+          </h1>
+          <h2
+            class=""
+          >
+            £
+            179
+          </h2>
+          <div
+            class="flex items-center gap-8"
+          >
+            <div
+              class="flex"
+            >
+              <button
+                class="text-center"
+              >
+                -
+              </button>
+              <span
+                class="text-center w-16"
+              >
+                2
+              </span>
+              <button
+                class="text-center"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="text-sm rounded-full bg-white-500 border-2 text-white border-red-600 bg-red-600 p-1 transition ease-out duration-300 hover:bg-red-800 hover:border-red-800"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-2 p-4 m-4 justify-between border-2 border-neutral-900 rounded-lg shadow-md overflow-hidden"
+      >
+        <img
+          alt="pic"
+          class="w-60 h-60"
+          src="http://cdn.shopify.com/s/files/1/0083/3903/0082/products/SM19000020-04004-748_02_grande.jpg?v=1663106690"
+        />
+        <div
+          class="flex flex-col items-center justify-center gap-4"
+        >
+          <h1
+            class="text-2xl"
+          >
+            Match-E-Trainer
+          </h1>
+          <h2
+            class=""
+          >
+            £
+            39
+          </h2>
+          <div
+            class="flex items-center gap-8"
+          >
+            <div
+              class="flex"
+            >
+              <button
+                class="text-center"
+              >
+                -
+              </button>
+              <span
+                class="text-center w-16"
+              >
+                1
+              </span>
+              <button
+                class="text-center"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="text-sm rounded-full bg-white-500 border-2 text-white border-red-600 bg-red-600 p-1 transition ease-out duration-300 hover:bg-red-800 hover:border-red-800"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -17,7 +17,7 @@ export default function Shop(){
                 <div className={"font-jakarta border-2 bg-white border-slate-800 shadow-lg rounded-lg flex flex-col gap-6 p-6 hover:shadow-xl hover:scale-105 cursor-pointer"}>
                     <div className={"flex flex-col items-center"}>
                         <h3 className={"text-center"}>{item.title}</h3>
-                        <img className={"w-64 h-64"} alt={"tshirt"} src={item.imgUrl}/>
+                        <img className={"w-64 h-64"} alt={"shoe product"} src={item.imgUrl}/>
                         <p>£{item.price}</p>
                     </div>
                 </div>
