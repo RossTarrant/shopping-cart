@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import{ faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-export default function CartIcon({basketQuantity, switchBasketView}){
+export default function CartIcon({basketQuantity}){
 
     return(
         <div className={"flex gap-2 justify-center content-center"}>
