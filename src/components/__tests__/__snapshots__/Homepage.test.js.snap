@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage component renders homepage 1`] = `
+<div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2"
+  >
+    <img
+      alt="fancy-shoes"
+      class="lg:rotate-45 mt-36 lg:ml-12"
+      src="https://www.stylist.co.uk/images/app/uploads/2020/04/01165256/gucci-trainers.png?w=1200&h=1&fit=max&auto=format%2Ccompress"
+    />
+    <div
+      class="text-center text-5xl lg:text-7xl xl:text-9xl text-slate-800 font-bold m-12"
+    >
+      <h1
+        class=""
+      >
+        Shoes.
+      </h1>
+      <h1
+        class=""
+      >
+        Shoes.
+      </h1>
+      <h1
+        class=""
+      >
+        Shoes.
+      </h1>
+      <h1
+        class=""
+      >
+        Shoes.
+      </h1>
+    </div>
+  </div>
+</div>
+`;

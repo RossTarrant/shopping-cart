@@ -12,7 +12,7 @@ export default function Shop(){
 
     const displayItems = () => {
         const mappedItems = shopItems.map( (item) =>
-        <div key={item.id}>
+        <div key={item.id} data-testid="shop-card">
             <Link to={'/shop/' + item.id}>
                 <div className={"font-jakarta border-2 bg-white border-slate-800 shadow-lg rounded-lg flex flex-col gap-6 p-6 hover:shadow-xl hover:scale-105 cursor-pointer"}>
                     <div className={"flex flex-col items-center"}>
