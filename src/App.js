@@ -62,10 +62,10 @@ function App() {
       <BrowserRouter>
         <Header basketQuantity={basketQuantity}/>
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/shop/:id" element={<ShopItem addToBasket={onAddToBasket}/>} />
-          <Route path="/cart" element={<Cart basket={basket} resetBasket={resetBasket} changeQuantity={changeQuantity} removeFromBasket={removeFromBasket}/>} />
+          <Route path="/shopping-cart/" element={<Homepage />} />
+          <Route path="/shopping-cart/shop" element={<Shop />} />
+          <Route path="/shopping-cart/shop/:id" element={<ShopItem addToBasket={onAddToBasket}/>} />
+          <Route path="/shopping-cart/cart" element={<Cart basket={basket} resetBasket={resetBasket} changeQuantity={changeQuantity} removeFromBasket={removeFromBasket}/>} />
         </Routes>
       </BrowserRouter>
     </div>
