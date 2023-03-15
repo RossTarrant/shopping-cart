@@ -41,7 +41,7 @@ describe("Cart component", () => {
         expect(screen.getByText("Your total is £397.00")).toBeTruthy();
     });
 
-    it("updates basket total when deleting item from basket", () => {
+    it("updates calls remove from basket function when button clicked", () => {
         const onClickRemoveItem = jest.fn();
         render(
             <BrowserRouter>
